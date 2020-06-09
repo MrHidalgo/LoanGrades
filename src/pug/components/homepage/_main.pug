@@ -1,0 +1,113 @@
+// SECTION :: START
+
+section#main.main
+	.c-grid
+		.main__wrapper
+
+			.main__header
+
+				p.main__title Loan Grades
+
+				.main__option
+					div
+
+						.main__option-link-wrapper
+							a.main__option-link.is-active(href="#") Company Wide
+							a.main__option-link(href="#") Branch
+							a.main__option-link(href="#") Loan Officer
+
+					div
+
+						.main__option-link-wrapper
+							a.main__option-link.main__option-link--small.is-active(href="#") WTD
+							a.main__option-link.main__option-link--small(href="#") MTD
+							a.main__option-link.main__option-link--small(href="#") YTD
+
+				.main__indicator-wrapper
+					.main__indicator.main__indicator-1.main__indicator--disclosed
+						div
+							p 17
+						div
+							i.icon-font.icon-flag-waving
+						div
+							span!= "Application<br>Disclosed <strong>(21)</strong>"
+					.main__indicator.main__indicator-2.main__indicator--approved
+						div
+							p 21
+						div
+							i.icon-font.icon-flag-waving
+						div
+							span!= "Approved with<br>conditions <strong>(21)</strong>"
+						img(src="img/caret-right.svg" alt="")
+					.main__indicator.main__indicator-3.main__indicator--cleared
+						div
+							p 10
+						div
+							i.icon-font.icon-flag-waving
+						div
+							span!= "Cleared<br>to Close <strong>(21)</strong>"
+						img(src="img/caret-right.svg" alt="")
+					.main__indicator.main__indicator-4.main__indicator--submitted
+						div
+							p 31
+						div
+							i.icon-font.icon-flag-waving
+						div
+							span!= "Submitted<br>to Doc Dept <strong>(21)</strong>"
+						img(src="img/caret-right.svg" alt="")
+					.main__indicator.main__indicator-5.main__indicator--out
+						div
+							p 11
+						div
+							i.icon-font.icon-flag-waving
+						div
+							span!= "Docs<br>Out <strong>(21)</strong>"
+						img(src="img/caret-right.svg" alt="")
+					.main__indicator.main__indicator-6.main__indicator--back
+						div
+							p 10
+						div
+							i.icon-font.icon-flag-waving
+						div
+							span!= "Docs<br>Back <strong>(21)</strong>"
+						img(src="img/caret-right.svg" alt="")
+					.main__indicator.main__indicator-7.main__indicator--funded
+						div
+							p 19
+						div
+							i.icon-font.icon-flag-waving
+						div
+							span!= "Loan<br>Funded <strong>(21)</strong>"
+						img(src="img/caret-right.svg" alt="")
+
+			.main__body
+
+				p.main__title Pipeline
+
+				.main__filter
+					div
+
+						.main__filter-search
+							input(type='text' name='' placeholder='Search…')
+							button(type='button')
+								i.icon-font.icon-search
+
+					div
+
+						.main__filter-view
+							div
+								i.icon-font.icon-view
+							div
+								span Pipeline View
+							div
+								i.icon-font.icon-caret-down
+
+						.main__filter-sort
+							div
+								i.icon-font.icon-sort-amount-down
+							div
+								span Sort By
+							div
+								i.icon-font.icon-caret-down
+
+// SECTION :: END

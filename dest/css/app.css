@@ -1,3 +1,47 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "iconFont";
+  src: url("../fonts/iconFont.eot");
+  src: url("../fonts/iconFont.eot?#iefix") format("eot"), url("../fonts/iconFont.woff2") format("woff2"), url("../fonts/iconFont.woff") format("woff"), url("../fonts/iconFont.ttf") format("truetype"), url("../fonts/iconFont.svg#iconFont") format("svg");
+}
+
+/* line 23, src/scss/_generated/_spriteFont.scss */
+.icon-caret-down:before, .icon-flag-waving:before, .icon-search:before, .icon-sort-amount-down:before, .icon-view:before {
+  font-family: "iconFont", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-caret-down:before {
+  content: "";
+}
+
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-flag-waving:before {
+  content: "";
+}
+
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-search:before {
+  content: "";
+}
+
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-sort-amount-down:before {
+  content: "";
+}
+
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-view:before {
+  content: "";
+}
+
 @font-face {
   font-family: "HelveticaNeue";
   src: url("../fonts/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue.woff") format("woff"), url("../fonts/HelveticaNeue.ttf") format("truetype");
@@ -221,6 +265,438 @@ picture {
 /* line 27, src/scss/_shared/_grid.scss */
 .c-grid-fluid {
   max-width: 100%;
+}
+
+/* line 1, src/scss/_shared/_iconFont.scss */
+.icon-font {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+}
+
+/* line 3, src/scss/_components/homepage/_main.scss */
+.main {
+  padding-top: 40px;
+  padding-bottom: 141px;
+}
+
+/* line 7, src/scss/_components/homepage/_main.scss */
+.main__title {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000;
+}
+
+/* line 14, src/scss/_components/homepage/_main.scss */
+.main__option {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+/* line 21, src/scss/_components/homepage/_main.scss */
+.main__option > div:nth-of-type(1) {
+  padding-right: 15px;
+}
+
+/* line 24, src/scss/_components/homepage/_main.scss */
+.main__option > div:nth-of-type(2) {
+  padding-left: 15px;
+}
+
+/* line 29, src/scss/_components/homepage/_main.scss */
+.main__option-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 30px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #727272;
+}
+
+/* line 41, src/scss/_components/homepage/_main.scss */
+.main__option-link--small {
+  width: 50px;
+}
+
+/* line 45, src/scss/_components/homepage/_main.scss */
+.main__option-link.is-active {
+  background-color: #f3f4f5;
+}
+
+/* line 49, src/scss/_components/homepage/_main.scss */
+.main__option-link-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 56, src/scss/_components/homepage/_main.scss */
+.main__indicator {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  height: 70px;
+  padding: 10px 10px 10px 20px;
+  border: 1px solid #eaeaeb;
+  background-color: #fff;
+}
+
+/* line 69, src/scss/_components/homepage/_main.scss */
+.main__indicator:first-of-type {
+  -webkit-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+/* line 72, src/scss/_components/homepage/_main.scss */
+.main__indicator:last-of-type {
+  -webkit-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+
+/* line 76, src/scss/_components/homepage/_main.scss */
+.main__indicator:after {
+  content: '';
+  z-index: 15;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/* line 87, src/scss/_components/homepage/_main.scss */
+.main__indicator:not(:first-of-type) {
+  border-left: none;
+}
+
+/* line 92, src/scss/_components/homepage/_main.scss */
+.main__indicator > div:nth-of-type(2) {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 99, src/scss/_components/homepage/_main.scss */
+.main__indicator--disclosed p,
+.main__indicator--disclosed .icon-font {
+  color: #ec411b;
+}
+
+/* line 105, src/scss/_components/homepage/_main.scss */
+.main__indicator--approved p,
+.main__indicator--approved .icon-font {
+  color: #A03745;
+}
+
+/* line 111, src/scss/_components/homepage/_main.scss */
+.main__indicator--cleared p,
+.main__indicator--cleared .icon-font {
+  color: #583C6B;
+}
+
+/* line 117, src/scss/_components/homepage/_main.scss */
+.main__indicator--submitted p,
+.main__indicator--submitted .icon-font {
+  color: #003686;
+}
+
+/* line 123, src/scss/_components/homepage/_main.scss */
+.main__indicator--out p,
+.main__indicator--out .icon-font {
+  color: #005A7B;
+}
+
+/* line 129, src/scss/_components/homepage/_main.scss */
+.main__indicator--back p,
+.main__indicator--back .icon-font {
+  color: #007966;
+}
+
+/* line 135, src/scss/_components/homepage/_main.scss */
+.main__indicator--funded p,
+.main__indicator--funded .icon-font {
+  color: #009C47;
+}
+
+/* line 141, src/scss/_components/homepage/_main.scss */
+.main__indicator-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+/* line 148, src/scss/_components/homepage/_main.scss */
+.main__indicator img {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -6px;
+}
+
+/* line 156, src/scss/_components/homepage/_main.scss */
+.main__indicator p {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+/* line 161, src/scss/_components/homepage/_main.scss */
+.main__indicator .icon-font {
+  font-size: 14px;
+}
+
+/* line 165, src/scss/_components/homepage/_main.scss */
+.main__indicator span {
+  font-size: 10px;
+  line-height: 11px;
+  color: #727272;
+}
+
+/* line 170, src/scss/_components/homepage/_main.scss */
+.main__indicator span strong {
+  font-weight: bold;
+}
+
+/* line 176, src/scss/_components/homepage/_main.scss */
+.main__filter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 36px;
+  border-top: 1px solid #e2e2e3;
+  border-bottom: 1px solid #e2e2e3;
+}
+
+/* line 184, src/scss/_components/homepage/_main.scss */
+.main__filter > div:nth-of-type(2) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 191, src/scss/_components/homepage/_main.scss */
+.main__filter-search {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 112px;
+  height: 100%;
+}
+
+/* line 198, src/scss/_components/homepage/_main.scss */
+.main__filter-search input {
+  outline: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.main__filter-search input.placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #c1c1c1;
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.main__filter-search input:-moz-placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #c1c1c1;
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.main__filter-search input::-moz-placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #c1c1c1;
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.main__filter-search input:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #c1c1c1;
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.main__filter-search input::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #c1c1c1;
+}
+
+/* line 219, src/scss/_components/homepage/_main.scss */
+.main__filter-search button {
+  outline: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: transparent;
+}
+
+/* line 234, src/scss/_components/homepage/_main.scss */
+.main__filter-search button .icon-font {
+  color: #c1c1c1;
+}
+
+/* line 240, src/scss/_components/homepage/_main.scss */
+.main__filter-sort, .main__filter-view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 18px;
+}
+
+/* line 248, src/scss/_components/homepage/_main.scss */
+.main__filter-sort > div:nth-of-type(2), .main__filter-view > div:nth-of-type(2) {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 254, src/scss/_components/homepage/_main.scss */
+.main__filter-sort span, .main__filter-view span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #c1c1c1;
+}
+
+/* line 261, src/scss/_components/homepage/_main.scss */
+.main__filter-sort .icon-font, .main__filter-view .icon-font {
+  color: #c1c1c1;
+}
+
+/* line 264, src/scss/_components/homepage/_main.scss */
+.main__filter-sort .icon-font.icon-sort-amount-down, .main__filter-view .icon-font.icon-sort-amount-down {
+  font-size: 13px;
+}
+
+/* line 267, src/scss/_components/homepage/_main.scss */
+.main__filter-sort .icon-font.icon-caret-down, .main__filter-view .icon-font.icon-caret-down {
+  font-size: 5px;
+}
+
+/* line 273, src/scss/_components/homepage/_main.scss */
+.main__filter-sort {
+  margin-left: 18px;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

@@ -5,5 +5,9 @@ pageClassName: p-home
 ---
 extends shared/_layout
 
+block header
+block footer
 block content
 	div.body.body--start(class!= pageClassName)
+
+		include components/homepage/_main
