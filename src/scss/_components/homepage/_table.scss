@@ -101,6 +101,9 @@
 			justify-content: center;
 			width: 350px;
 			padding-bottom: 15px;
+			@include adaptive(1279) {
+				width: 175px;
+			}
 		}
 
 		&-row {
@@ -112,6 +115,9 @@
 				max-width: calc(100% / 3);
 				padding-right: 55px;
 				padding-bottom: 15px;
+				@include adaptive(1279) {
+					padding-right: 30px;
+				}
 			}
 		}
 

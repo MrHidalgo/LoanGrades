@@ -1104,7 +1104,14 @@ picture {
   padding-bottom: 15px;
 }
 
-/* line 106, src/scss/_components/homepage/_table.scss */
+@media screen and (max-width: 1279px) {
+  /* line 98, src/scss/_components/homepage/_table.scss */
+  .table__block-right {
+    width: 175px;
+  }
+}
+
+/* line 109, src/scss/_components/homepage/_table.scss */
 .table__block-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1115,7 +1122,7 @@ picture {
           flex-wrap: wrap;
 }
 
-/* line 110, src/scss/_components/homepage/_table.scss */
+/* line 113, src/scss/_components/homepage/_table.scss */
 .table__block-row > div {
   width: 100%;
   max-width: -webkit-calc(100% / 3);
@@ -1124,7 +1131,14 @@ picture {
   padding-bottom: 15px;
 }
 
-/* line 118, src/scss/_components/homepage/_table.scss */
+@media screen and (max-width: 1279px) {
+  /* line 113, src/scss/_components/homepage/_table.scss */
+  .table__block-row > div {
+    padding-right: 30px;
+  }
+}
+
+/* line 124, src/scss/_components/homepage/_table.scss */
 .table__block-data {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1140,7 +1154,7 @@ picture {
           justify-content: space-between;
 }
 
-/* line 124, src/scss/_components/homepage/_table.scss */
+/* line 130, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1150,7 +1164,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 129, src/scss/_components/homepage/_table.scss */
+/* line 135, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(1) p {
   font-weight: bold;
   font-size: 12px;
@@ -1158,7 +1172,7 @@ picture {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 136, src/scss/_components/homepage/_table.scss */
+/* line 142, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1182,14 +1196,14 @@ picture {
   background-position: center;
 }
 
-/* line 148, src/scss/_components/homepage/_table.scss */
+/* line 154, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(2) span {
   color: #ffffff;
   font-weight: bold;
   font-size: 12px;
 }
 
-/* line 157, src/scss/_components/homepage/_table.scss */
+/* line 163, src/scss/_components/homepage/_table.scss */
 .table__block-circle {
   overflow: hidden;
   position: relative;
@@ -1212,13 +1226,13 @@ picture {
   background-color: #000;
 }
 
-/* line 168, src/scss/_components/homepage/_table.scss */
+/* line 174, src/scss/_components/homepage/_table.scss */
 .table__block-circle p,
 .table__block-circle .icon-font {
   color: #ffffff;
 }
 
-/* line 173, src/scss/_components/homepage/_table.scss */
+/* line 179, src/scss/_components/homepage/_table.scss */
 .table__block-circle p {
   font-weight: bold;
   font-size: 35px;
@@ -1226,7 +1240,7 @@ picture {
   color: #fff;
 }
 
-/* line 180, src/scss/_components/homepage/_table.scss */
+/* line 186, src/scss/_components/homepage/_table.scss */
 .table__block-circle .icon-font {
   margin-left: 3px;
   font-size: 25px;
