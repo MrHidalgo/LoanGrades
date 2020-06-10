@@ -19,8 +19,8 @@ section#table.table
 						.table__th Grade
 
 				.table__tbody
-					each val,idx in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-						.table__tr
+					each val,idx in [1,1,3,4,15,6,17,1,9,10,11,12,13,14]
+						.table__tr(data-id!= idx table-toggle-js)
 							.table__td!= (idx % 2 === 0) ? 'Garcia' : 'Lorem'
 							.table__td!= (idx % 2 === 0) ? '2004023799' : '000001000'
 							.table__td!= (idx % 2 === 0) ? 'Padilla' : 'Ipsum'
@@ -30,5 +30,42 @@ section#table.table
 							.table__td Reconciled
 							.table__td Banked - Retail
 							.table__td!= val
+
+						.table__block-wrapper(data-id!= idx)
+							.table__block
+								.table__block-left
+
+									.table__block-row
+										-
+											let date = [
+												'Borrower Points',
+												'LTV Points',
+												'FICO Points',
+												'Job Points',
+												'Occupancy Points',
+												'Property Type Points',
+												'Amount of Application Points',
+												'Transaction Type Points',
+												'OPS PIW Points',
+												'Real Estate Owned Points',
+												'Loan Type Points',
+												'OPS Day 1 Points',
+												'Self Employed Points',
+												'AUS Points',
+												'Bottom Ratio Points'
+											];
+										-for(let i = 0; i < date.length; i++)
+											div
+												.table__block-data
+													div
+														p!= date[i]
+													div
+														span 1
+
+								.table__block-right
+
+									.table__block-circle
+										p!= val
+										i.icon-font.icon-flag-waving
 
 // SECTION :: END

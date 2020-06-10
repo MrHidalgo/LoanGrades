@@ -12,16 +12,16 @@ section#main.main
 					div
 
 						.main__option-link-wrapper
-							a.main__option-link.is-active(href="#") Company Wide
-							a.main__option-link(href="#") Branch
-							a.main__option-link(href="#") Loan Officer
+							a.main__option-link.is-active(href="#" btn-toggle-js) Company Wide
+							a.main__option-link(href="#" btn-toggle-js) Branch
+							a.main__option-link(href="#" btn-toggle-js) Loan Officer
 
 					div
 
 						.main__option-link-wrapper
-							a.main__option-link.main__option-link--small.is-active(href="#") WTD
-							a.main__option-link.main__option-link--small(href="#") MTD
-							a.main__option-link.main__option-link--small(href="#") YTD
+							a.main__option-link.main__option-link--small.is-active(href="#" link-toggle-js) WTD
+							a.main__option-link.main__option-link--small(href="#" link-toggle-js) MTD
+							a.main__option-link.main__option-link--small(href="#" link-toggle-js) YTD
 
 				.main__indicator-wrapper
 					.main__indicator.main__indicator-1.main__indicator--disclosed
@@ -116,8 +116,10 @@ section#main.main
 								i.icon-font.icon-caret-down
 
 							.main__filter-sort-drop
-								a(href="#") Action
-								a(href="#") More Action
-								a(href="#") More Action
+								a(href="#") Newest to Oldest
+								a(href="#") Oldest to Newest
+								a(href="#" sort-highest-js) Highest Grade
+								a(href="#" sort-lowest-js) Lowest Grade
+								a(href="#") Milestone Status
 
 // SECTION :: END

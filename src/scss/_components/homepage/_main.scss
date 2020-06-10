@@ -38,6 +38,7 @@
 			font-size: 12px;
 			line-height: 14px;
 			color: #727272;
+			@include transition(background-color);
 
 			&--small {
 				width: 50px;
@@ -45,6 +46,7 @@
 
 			&.is-active {
 				background-color: #f3f4f5;
+				@include transition(background-color);
 			}
 
 			&-wrapper {
