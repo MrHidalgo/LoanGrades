@@ -29,43 +29,43 @@ section#table.table
 							.table__td!= (idx % 2 === 0) ? "Cleared to Close":"Cleared"
 							.table__td Reconciled
 							.table__td Banked - Retail
-							.table__td!= val
+							.table__td.table__td--numeric!= val
 
-						.table__block-wrapper(data-id!= idx)
-							.table__block
-								.table__block-left
+							.table__block-wrapper(data-id!= idx)
+								.table__block
+									.table__block-left
 
-									.table__block-row
-										-
-											let date = [
-												'Borrower Points',
-												'LTV Points',
-												'FICO Points',
-												'Job Points',
-												'Occupancy Points',
-												'Property Type Points',
-												'Amount of Application Points',
-												'Transaction Type Points',
-												'OPS PIW Points',
-												'Real Estate Owned Points',
-												'Loan Type Points',
-												'OPS Day 1 Points',
-												'Self Employed Points',
-												'AUS Points',
-												'Bottom Ratio Points'
-											];
-										-for(let i = 0; i < date.length; i++)
-											div
-												.table__block-data
-													div
-														p!= date[i]
-													div
-														span 1
+										.table__block-row
+											-
+												let date = [
+													'Borrower Points',
+													'LTV Points',
+													'FICO Points',
+													'Job Points',
+													'Occupancy Points',
+													'Property Type Points',
+													'Amount of Application Points',
+													'Transaction Type Points',
+													'OPS PIW Points',
+													'Real Estate Owned Points',
+													'Loan Type Points',
+													'OPS Day 1 Points',
+													'Self Employed Points',
+													'AUS Points',
+													'Bottom Ratio Points'
+												];
+											-for(let i = 0; i < date.length; i++)
+												div
+													.table__block-data
+														div
+															p!= date[i]
+														div
+															span 1
 
-								.table__block-right
+									.table__block-right
 
-									.table__block-circle
-										p!= val
-										i.icon-font.icon-flag-waving
+										.table__block-circle
+											p!= val
+											i.icon-font.icon-flag-waving
 
 // SECTION :: END

@@ -990,17 +990,20 @@ picture {
 
 /* line 37, src/scss/_components/homepage/_table.scss */
 .table__tbody .table__tr {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 40, src/scss/_components/homepage/_table.scss */
+/* line 41, src/scss/_components/homepage/_table.scss */
 .table__tbody .table__tr:not(:last-of-type) {
   border-bottom: 1px solid #e2e2e3;
 }
 
-/* line 44, src/scss/_components/homepage/_table.scss */
+/* line 45, src/scss/_components/homepage/_table.scss */
 .table__tbody .table__tr:hover, .table__tbody .table__tr.is-open {
   background-color: #fafafa;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -1008,7 +1011,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 52, src/scss/_components/homepage/_table.scss */
+/* line 53, src/scss/_components/homepage/_table.scss */
 .table__tr {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1021,7 +1024,7 @@ picture {
   width: 100%;
 }
 
-/* line 57, src/scss/_components/homepage/_table.scss */
+/* line 58, src/scss/_components/homepage/_table.scss */
 .table__tr .table__th,
 .table__tr .table__td {
   -webkit-box-flex: 1;
@@ -1033,7 +1036,7 @@ picture {
   padding: 5px 10px;
 }
 
-/* line 66, src/scss/_components/homepage/_table.scss */
+/* line 67, src/scss/_components/homepage/_table.scss */
 .table__th {
   font-weight: bold;
   font-size: 12px;
@@ -1041,7 +1044,7 @@ picture {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 73, src/scss/_components/homepage/_table.scss */
+/* line 74, src/scss/_components/homepage/_table.scss */
 .table__td {
   cursor: pointer;
   display: -webkit-box;
@@ -1055,7 +1058,7 @@ picture {
   height: 47px;
 }
 
-/* line 80, src/scss/_components/homepage/_table.scss */
+/* line 81, src/scss/_components/homepage/_table.scss */
 .table__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1067,16 +1070,17 @@ picture {
           align-items: center;
   min-height: 210px;
   padding: 15px 10px 0;
-  border-bottom: 1px solid #e2e2e3;
+  border-top: 1px solid #e2e2e3;
   background-color: #fafafa;
 }
 
-/* line 88, src/scss/_components/homepage/_table.scss */
+/* line 89, src/scss/_components/homepage/_table.scss */
 .table__block-wrapper {
   display: none;
+  width: 100%;
 }
 
-/* line 92, src/scss/_components/homepage/_table.scss */
+/* line 94, src/scss/_components/homepage/_table.scss */
 .table__block-left {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1086,7 +1090,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 98, src/scss/_components/homepage/_table.scss */
+/* line 100, src/scss/_components/homepage/_table.scss */
 .table__block-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1105,13 +1109,13 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 98, src/scss/_components/homepage/_table.scss */
+  /* line 100, src/scss/_components/homepage/_table.scss */
   .table__block-right {
     width: 175px;
   }
 }
 
-/* line 109, src/scss/_components/homepage/_table.scss */
+/* line 111, src/scss/_components/homepage/_table.scss */
 .table__block-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1122,7 +1126,7 @@ picture {
           flex-wrap: wrap;
 }
 
-/* line 113, src/scss/_components/homepage/_table.scss */
+/* line 115, src/scss/_components/homepage/_table.scss */
 .table__block-row > div {
   width: 100%;
   max-width: -webkit-calc(100% / 3);
@@ -1132,13 +1136,13 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 113, src/scss/_components/homepage/_table.scss */
+  /* line 115, src/scss/_components/homepage/_table.scss */
   .table__block-row > div {
     padding-right: 30px;
   }
 }
 
-/* line 124, src/scss/_components/homepage/_table.scss */
+/* line 126, src/scss/_components/homepage/_table.scss */
 .table__block-data {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1154,7 +1158,7 @@ picture {
           justify-content: space-between;
 }
 
-/* line 130, src/scss/_components/homepage/_table.scss */
+/* line 132, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1164,7 +1168,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 135, src/scss/_components/homepage/_table.scss */
+/* line 137, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(1) p {
   font-weight: bold;
   font-size: 12px;
@@ -1172,7 +1176,7 @@ picture {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 142, src/scss/_components/homepage/_table.scss */
+/* line 144, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1196,14 +1200,14 @@ picture {
   background-position: center;
 }
 
-/* line 154, src/scss/_components/homepage/_table.scss */
+/* line 156, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(2) span {
   color: #ffffff;
   font-weight: bold;
   font-size: 12px;
 }
 
-/* line 163, src/scss/_components/homepage/_table.scss */
+/* line 165, src/scss/_components/homepage/_table.scss */
 .table__block-circle {
   overflow: hidden;
   position: relative;
@@ -1226,13 +1230,13 @@ picture {
   background-color: #000;
 }
 
-/* line 174, src/scss/_components/homepage/_table.scss */
+/* line 176, src/scss/_components/homepage/_table.scss */
 .table__block-circle p,
 .table__block-circle .icon-font {
   color: #ffffff;
 }
 
-/* line 179, src/scss/_components/homepage/_table.scss */
+/* line 181, src/scss/_components/homepage/_table.scss */
 .table__block-circle p {
   font-weight: bold;
   font-size: 35px;
@@ -1240,7 +1244,7 @@ picture {
   color: #fff;
 }
 
-/* line 186, src/scss/_components/homepage/_table.scss */
+/* line 188, src/scss/_components/homepage/_table.scss */
 .table__block-circle .icon-font {
   margin-left: 3px;
   font-size: 25px;

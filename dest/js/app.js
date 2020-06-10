@@ -42,6 +42,7 @@ var initPreventBehavior = function initPreventBehavior() {
 			$('[btn-toggle-js]').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
 		});
+
 		$('[link-toggle-js]').on('click', function (ev) {
 			$('[link-toggle-js]').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
@@ -50,18 +51,17 @@ var initPreventBehavior = function initPreventBehavior() {
 
 	var toggleTableRow = function toggleTableRow() {
 		$('[table-toggle-js]').on('click', function (ev) {
-			var el = $(ev.currentTarget),
-			    elID = el.attr('data-id');
+			var el = $(ev.currentTarget);
 
 			if (el.hasClass('is-open')) {
 				el.removeClass('is-open');
-				el.siblings('.table__block-wrapper[data-id="' + elID + '"]').slideUp(250);
+				el.find('.table__block-wrapper').slideUp(250);
 			} else {
 				$('[table-toggle-js]').removeClass('is-open');
 				$('.table__block-wrapper').slideUp(250);
 
 				el.addClass('is-open');
-				el.siblings('.table__block-wrapper[data-id="' + elID + '"]').slideDown(250);
+				el.find('.table__block-wrapper').slideDown(250);
 			}
 		});
 	};
@@ -81,7 +81,17 @@ var initPreventBehavior = function initPreventBehavior() {
 	};
 
 	var sortNumeric = function sortNumeric() {
-		var sortNumberTable1 = function sortNumberTable1() {
+		$.fn.reverseChildren = function () {
+			return this.each(function () {
+				var $this = $(this);
+
+				$this.children().each(function () {
+					$this.prepend(this);
+				});
+			});
+		};
+
+		var sortNumberTable = function sortNumberTable() {
 			var table = void 0,
 			    rows = void 0,
 			    switching = void 0,
@@ -100,8 +110,8 @@ var initPreventBehavior = function initPreventBehavior() {
 				for (i = 1; i < rows.length - 1; i++) {
 					shouldSwitch = false;
 
-					x = rows[i].querySelector(".table__td:last-of-type");
-					y = rows[i + 1].querySelector(".table__td:last-of-type");
+					x = rows[i].querySelector(".table__td--numeric");
+					y = rows[i + 1].querySelector(".table__td--numeric");
 
 					if (Number(x.innerHTML) > Number(y.innerHTML)) {
 						shouldSwitch = true;
@@ -117,20 +127,11 @@ var initPreventBehavior = function initPreventBehavior() {
 		};
 
 		$('[sort-lowest-js]').on('click', function (ev) {
-			sortNumberTable1();
+			sortNumberTable();
 		});
+
 		$('[sort-highest-js]').on('click', function (ev) {
-			sortNumberTable1();
-
-			$.fn.reverseChildren = function () {
-				return this.each(function () {
-					var $this = $(this);
-
-					$this.children().each(function () {
-						$this.prepend(this);
-					});
-				});
-			};
+			sortNumberTable();
 
 			$('#table .table__tbody').reverseChildren();
 		});

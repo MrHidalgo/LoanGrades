@@ -10,6 +10,7 @@
 			$('[btn-toggle-js]').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
 		});
+
 		$('[link-toggle-js]').on('click', (ev) => {
 			$('[link-toggle-js]').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
@@ -19,18 +20,17 @@
 
 	const toggleTableRow = () => {
 		$('[table-toggle-js]').on('click', (ev) => {
-			const el = $(ev.currentTarget),
-				elID = el.attr('data-id');
+			const el = $(ev.currentTarget);
 
 			if(el.hasClass('is-open')) {
 				el.removeClass('is-open');
-				el.siblings('.table__block-wrapper[data-id="' + elID + '"]').slideUp(250);
+				el.find('.table__block-wrapper').slideUp(250);
 			} else {
 				$('[table-toggle-js]').removeClass('is-open');
 				$('.table__block-wrapper').slideUp(250);
 
 				el.addClass('is-open');
-				el.siblings('.table__block-wrapper[data-id="' + elID + '"]').slideDown(250);
+				el.find('.table__block-wrapper').slideDown(250);
 			}
 
 		});
@@ -53,7 +53,15 @@
 
 
 	const sortNumeric = () => {
-		const sortNumberTable1 = () => {
+		$.fn.reverseChildren = function() {
+			return this.each(function(){
+				var $this = $(this);
+
+				$this.children().each(function(){ $this.prepend(this) });
+			});
+		};
+
+		const sortNumberTable = () => {
 			let table, rows, switching, i, x, y, shouldSwitch;
 
 			table = document.getElementById("table");
@@ -66,8 +74,8 @@
 				for (i = 1; i < (rows.length - 1); i++) {
 					shouldSwitch = false;
 
-					x = rows[i].querySelector(".table__td:last-of-type");
-					y = rows[i + 1].querySelector(".table__td:last-of-type");
+					x = rows[i].querySelector(".table__td--numeric");
+					y = rows[i + 1].querySelector(".table__td--numeric");
 
 					if (Number(x.innerHTML) > Number(y.innerHTML)) {
 						shouldSwitch = true;
@@ -84,18 +92,11 @@
 
 
 		$('[sort-lowest-js]').on('click', (ev) => {
-			sortNumberTable1();
+			sortNumberTable();
 		});
+
 		$('[sort-highest-js]').on('click', (ev) => {
-			sortNumberTable1();
-
-			$.fn.reverseChildren = function() {
-				return this.each(function(){
-					var $this = $(this);
-
-					$this.children().each(function(){ $this.prepend(this) });
-				});
-			};
+			sortNumberTable();
 
 			$('#table .table__tbody').reverseChildren();
 		});
