@@ -1,8 +1,9 @@
 // SECTION :: START
 
 .main {
+	z-index: 2;
+	position: relative;
 	padding-top: 40px;
-	padding-bottom: 141px;
 
 	&__title {
 		padding-bottom: 10px;
@@ -178,7 +179,6 @@
 		justify-content: space-between;
 		height: 36px;
 		border-top: 1px solid #e2e2e3;
-		border-bottom: 1px solid #e2e2e3;
 
 		> div {
 			&:nth-of-type(2) {

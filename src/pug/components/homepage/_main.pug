@@ -87,8 +87,8 @@ section#main.main
 				.main__filter
 					div
 
-						.main__filter-search
-							input(type='text' name='' placeholder='Search…')
+						form.main__filter-search(autocomplete='off' action='' method='')
+							input(type='text' id='search' name='' placeholder='Search...')
 							button(type='button')
 								i.icon-font.icon-search
 

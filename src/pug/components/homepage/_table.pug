@@ -1,0 +1,34 @@
+// SECTION :: START
+
+section#table.table
+	.c-grid
+		.table__wrapper
+
+			.table__container
+
+				.table__thead
+					.table__tr
+						.table__th Borrower
+						.table__th Loan Number
+						.table__th Loan Officer
+						.table__th Processor
+						.table__th Underwriter
+						.table__th Loan Type
+						.table__th Milestone
+						.table__th Channel
+						.table__th Grade
+
+				.table__tbody
+					each val,idx in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+						.table__tr
+							.table__td!= (idx % 2 === 0) ? 'Garcia' : 'Lorem'
+							.table__td!= (idx % 2 === 0) ? '2004023799' : '000001000'
+							.table__td!= (idx % 2 === 0) ? 'Padilla' : 'Ipsum'
+							.table__td Mordoff
+							.table__td Cuda
+							.table__td!= (idx % 2 === 0) ? "Cleared to Close":"Cleared"
+							.table__td Reconciled
+							.table__td Banked - Retail
+							.table__td!= val
+
+// SECTION :: END

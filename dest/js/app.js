@@ -37,7 +37,19 @@ var initPreventBehavior = function initPreventBehavior() {
 	/*
  * CALLBACK :: start
  * ============================================= */
+	var searchTable = function searchTable() {
+		var $rows = $('#table .table__tbody .table__tr');
 
+		$('#search').keyup(function (ev) {
+			var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+			$rows.show().filter(function () {
+				var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+
+				return !~text.indexOf(val);
+			}).hide();
+		});
+	};
 	/*
  * CALLBACK :: end
  * ============================================= */
@@ -56,6 +68,7 @@ var initPreventBehavior = function initPreventBehavior() {
 		// ==========================================
 
 		// callback
+		searchTable();
 		// ==========================================
 	};
 	initNative();
