@@ -239,10 +239,55 @@
 
 		&-sort,
 		&-view {
+			cursor: pointer;
+			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-left: 18px;
+			height: 100%;
+
+			&:hover {
+				.main__filter-sort-drop {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+					@include transition(opacity, visibility, transform);
+				}
+			}
+
+			&-drop {
+				opacity: 0;
+				visibility: hidden;
+				transform: translateY(10px);
+				position: absolute;
+				top: 100%;
+				right: 0;
+				display: flex;
+				flex-direction: column;
+				width: 125px;
+				padding: 5px 0;
+				border-radius: 4px;
+				background-color: #fff;
+				box-shadow: 0 1px 5px 0 rgba(#000, 0.15);
+				backface-visibility: hidden;
+				@include transition(opacity, visibility, transform);
+
+				a {
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+					min-height: 35px;
+					padding-left: 10px;
+					padding-right: 10px;
+					color: #727272;
+					@include transition(background-color);
+
+					&:hover {
+						background-color: #f3f4f5;
+						@include transition(background-color);
+					}
+				}
+			}
 
 			> div {
 				&:nth-of-type(2) {

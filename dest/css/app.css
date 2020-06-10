@@ -650,6 +650,8 @@ picture {
 
 /* line 240, src/scss/_components/homepage/_main.scss */
 .main__filter-sort, .main__filter-view {
+  cursor: pointer;
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -662,16 +664,96 @@ picture {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 18px;
+  height: 100%;
 }
 
-/* line 248, src/scss/_components/homepage/_main.scss */
+/* line 250, src/scss/_components/homepage/_main.scss */
+.main__filter-sort:hover .main__filter-sort-drop, .main__filter-view:hover .main__filter-sort-drop {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 258, src/scss/_components/homepage/_main.scss */
+.main__filter-sort-drop, .main__filter-view-drop {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 125px;
+  padding: 5px 0;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 275, src/scss/_components/homepage/_main.scss */
+.main__filter-sort-drop a, .main__filter-view-drop a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #727272;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 285, src/scss/_components/homepage/_main.scss */
+.main__filter-sort-drop a:hover, .main__filter-view-drop a:hover {
+  background-color: #f3f4f5;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 293, src/scss/_components/homepage/_main.scss */
 .main__filter-sort > div:nth-of-type(2), .main__filter-view > div:nth-of-type(2) {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 254, src/scss/_components/homepage/_main.scss */
+/* line 299, src/scss/_components/homepage/_main.scss */
 .main__filter-sort span, .main__filter-view span {
   font-weight: 500;
   font-size: 12px;
@@ -679,22 +761,22 @@ picture {
   color: #c1c1c1;
 }
 
-/* line 261, src/scss/_components/homepage/_main.scss */
+/* line 306, src/scss/_components/homepage/_main.scss */
 .main__filter-sort .icon-font, .main__filter-view .icon-font {
   color: #c1c1c1;
 }
 
-/* line 264, src/scss/_components/homepage/_main.scss */
+/* line 309, src/scss/_components/homepage/_main.scss */
 .main__filter-sort .icon-font.icon-sort-amount-down, .main__filter-view .icon-font.icon-sort-amount-down {
   font-size: 13px;
 }
 
-/* line 267, src/scss/_components/homepage/_main.scss */
+/* line 312, src/scss/_components/homepage/_main.scss */
 .main__filter-sort .icon-font.icon-caret-down, .main__filter-view .icon-font.icon-caret-down {
   font-size: 5px;
 }
 
-/* line 273, src/scss/_components/homepage/_main.scss */
+/* line 318, src/scss/_components/homepage/_main.scss */
 .main__filter-sort {
   margin-left: 18px;
 }
