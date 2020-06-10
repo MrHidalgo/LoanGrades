@@ -38,6 +38,16 @@ var initPreventBehavior = function initPreventBehavior() {
  * CALLBACK :: start
  * ============================================= */
 	var btnToggle = function btnToggle() {
+		$('body').on('click', function (ev) {
+			var className = "[sort-toggle-js], [pipline-toggle-js]";
+
+			if ($(window).width() < 768) {
+				if (!$(ev.target).closest(className).length) {
+					$('.main__filter-sort-drop').removeClass('is-show');
+				}
+			}
+		});
+
 		$('[btn-toggle-js]').on('click', function (ev) {
 			$('[btn-toggle-js]').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
@@ -46,6 +56,12 @@ var initPreventBehavior = function initPreventBehavior() {
 		$('[link-toggle-js]').on('click', function (ev) {
 			$('[link-toggle-js]').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
+		});
+
+		$('[sort-toggle-js], [pipline-toggle-js]').hover(function (ev) {
+			$(ev.currentTarget).find('.main__filter-sort-drop').addClass('is-show');
+		}, function (ev) {
+			$(ev.currentTarget).find('.main__filter-sort-drop').removeClass('is-show');
 		});
 	};
 

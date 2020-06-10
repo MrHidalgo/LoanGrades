@@ -6,6 +6,16 @@
 	* CALLBACK :: start
 	* ============================================= */
 	const btnToggle = () => {
+		$('body').on('click', function (ev) {
+			const className = "[sort-toggle-js], [pipline-toggle-js]";
+
+			if($(window).width() < 768) {
+				if (!$(ev.target).closest(className).length) {
+					$('.main__filter-sort-drop').removeClass('is-show');
+				}
+			}
+		});
+
 		$('[btn-toggle-js]').on('click', (ev) => {
 			$('[btn-toggle-js]').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
@@ -15,6 +25,15 @@
 			$('[link-toggle-js]').removeClass('is-active');
 			$(ev.currentTarget).addClass('is-active');
 		});
+
+		$('[sort-toggle-js], [pipline-toggle-js]').hover(
+			(ev) => {
+				$(ev.currentTarget).find('.main__filter-sort-drop').addClass('is-show');
+			},
+			(ev) => {
+				$(ev.currentTarget).find('.main__filter-sort-drop').removeClass('is-show');
+			},
+		);
 	};
 
 

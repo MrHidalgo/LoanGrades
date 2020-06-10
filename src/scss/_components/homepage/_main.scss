@@ -315,7 +315,8 @@
 			justify-content: center;
 			height: 100%;
 
-			&:hover {
+			&:hover,
+			&.is-show {
 				.main__filter-sort-drop {
 					opacity: 1;
 					visibility: visible;

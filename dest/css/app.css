@@ -803,8 +803,8 @@ picture {
   height: 100%;
 }
 
-/* line 319, src/scss/_components/homepage/_main.scss */
-.main__filter-sort:hover .main__filter-sort-drop, .main__filter-view:hover .main__filter-sort-drop {
+/* line 320, src/scss/_components/homepage/_main.scss */
+.main__filter-sort:hover .main__filter-sort-drop, .main__filter-sort.is-show .main__filter-sort-drop, .main__filter-view:hover .main__filter-sort-drop, .main__filter-view.is-show .main__filter-sort-drop {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
@@ -817,7 +817,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 327, src/scss/_components/homepage/_main.scss */
+/* line 328, src/scss/_components/homepage/_main.scss */
 .main__filter-sort-drop, .main__filter-view-drop {
   opacity: 0;
   visibility: hidden;
@@ -852,7 +852,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 344, src/scss/_components/homepage/_main.scss */
+/* line 345, src/scss/_components/homepage/_main.scss */
 .main__filter-sort-drop a, .main__filter-view-drop a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -875,7 +875,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 354, src/scss/_components/homepage/_main.scss */
+/* line 355, src/scss/_components/homepage/_main.scss */
 .main__filter-sort-drop a:hover, .main__filter-view-drop a:hover {
   background-color: #f3f4f5;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -883,13 +883,13 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 362, src/scss/_components/homepage/_main.scss */
+/* line 363, src/scss/_components/homepage/_main.scss */
 .main__filter-sort > div:nth-of-type(2), .main__filter-view > div:nth-of-type(2) {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 368, src/scss/_components/homepage/_main.scss */
+/* line 369, src/scss/_components/homepage/_main.scss */
 .main__filter-sort span, .main__filter-view span {
   font-weight: 500;
   font-size: 12px;
@@ -898,28 +898,28 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 368, src/scss/_components/homepage/_main.scss */
+  /* line 369, src/scss/_components/homepage/_main.scss */
   .main__filter-sort span, .main__filter-view span {
     display: none;
   }
 }
 
-/* line 378, src/scss/_components/homepage/_main.scss */
+/* line 379, src/scss/_components/homepage/_main.scss */
 .main__filter-sort .icon-font, .main__filter-view .icon-font {
   color: #c1c1c1;
 }
 
-/* line 381, src/scss/_components/homepage/_main.scss */
+/* line 382, src/scss/_components/homepage/_main.scss */
 .main__filter-sort .icon-font.icon-sort-amount-down, .main__filter-view .icon-font.icon-sort-amount-down {
   font-size: 13px;
 }
 
-/* line 384, src/scss/_components/homepage/_main.scss */
+/* line 385, src/scss/_components/homepage/_main.scss */
 .main__filter-sort .icon-font.icon-caret-down, .main__filter-view .icon-font.icon-caret-down {
   font-size: 5px;
 }
 
-/* line 390, src/scss/_components/homepage/_main.scss */
+/* line 391, src/scss/_components/homepage/_main.scss */
 .main__filter-sort {
   margin-left: 18px;
 }
@@ -931,16 +931,18 @@ picture {
   padding-bottom: 141px;
 }
 
-/* line 8, src/scss/_components/homepage/_table.scss */
-.table__wrapper {
-  overflow: hidden;
-  overflow-x: auto;
-  position: relative;
-  width: -webkit-calc(100% + 15px);
-  width: calc(100% + 15px);
+@media screen and (max-width: 1023px) {
+  /* line 8, src/scss/_components/homepage/_table.scss */
+  .table__wrapper {
+    overflow: hidden;
+    overflow-x: auto;
+    position: relative;
+    width: -webkit-calc(100% + 15px);
+    width: calc(100% + 15px);
+  }
 }
 
-/* line 15, src/scss/_components/homepage/_table.scss */
+/* line 17, src/scss/_components/homepage/_table.scss */
 .table__container {
   overflow: hidden;
   position: relative;
@@ -959,13 +961,13 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 15, src/scss/_components/homepage/_table.scss */
+  /* line 17, src/scss/_components/homepage/_table.scss */
   .table__container {
     width: 1024px;
   }
 }
 
-/* line 27, src/scss/_components/homepage/_table.scss */
+/* line 29, src/scss/_components/homepage/_table.scss */
 .table__thead {
   display: -webkit-box;
   display: -webkit-flex;
@@ -975,7 +977,7 @@ picture {
   background-color: #eaeaeb;
 }
 
-/* line 33, src/scss/_components/homepage/_table.scss */
+/* line 35, src/scss/_components/homepage/_table.scss */
 .table__tbody {
   display: -webkit-box;
   display: -webkit-flex;
@@ -988,7 +990,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 37, src/scss/_components/homepage/_table.scss */
+/* line 39, src/scss/_components/homepage/_table.scss */
 .table__tbody .table__tr {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
@@ -998,12 +1000,12 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 41, src/scss/_components/homepage/_table.scss */
+/* line 43, src/scss/_components/homepage/_table.scss */
 .table__tbody .table__tr:not(:last-of-type) {
   border-bottom: 1px solid #e2e2e3;
 }
 
-/* line 45, src/scss/_components/homepage/_table.scss */
+/* line 47, src/scss/_components/homepage/_table.scss */
 .table__tbody .table__tr:hover, .table__tbody .table__tr.is-open {
   background-color: #fafafa;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -1011,7 +1013,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 53, src/scss/_components/homepage/_table.scss */
+/* line 55, src/scss/_components/homepage/_table.scss */
 .table__tr {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1024,7 +1026,7 @@ picture {
   width: 100%;
 }
 
-/* line 58, src/scss/_components/homepage/_table.scss */
+/* line 60, src/scss/_components/homepage/_table.scss */
 .table__tr .table__th,
 .table__tr .table__td {
   -webkit-box-flex: 1;
@@ -1036,7 +1038,7 @@ picture {
   padding: 5px 10px;
 }
 
-/* line 67, src/scss/_components/homepage/_table.scss */
+/* line 69, src/scss/_components/homepage/_table.scss */
 .table__th {
   font-weight: bold;
   font-size: 12px;
@@ -1044,7 +1046,7 @@ picture {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 74, src/scss/_components/homepage/_table.scss */
+/* line 76, src/scss/_components/homepage/_table.scss */
 .table__td {
   cursor: pointer;
   display: -webkit-box;
@@ -1058,7 +1060,7 @@ picture {
   height: 47px;
 }
 
-/* line 81, src/scss/_components/homepage/_table.scss */
+/* line 83, src/scss/_components/homepage/_table.scss */
 .table__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1074,13 +1076,13 @@ picture {
   background-color: #fafafa;
 }
 
-/* line 89, src/scss/_components/homepage/_table.scss */
+/* line 91, src/scss/_components/homepage/_table.scss */
 .table__block-wrapper {
   display: none;
   width: 100%;
 }
 
-/* line 94, src/scss/_components/homepage/_table.scss */
+/* line 96, src/scss/_components/homepage/_table.scss */
 .table__block-left {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1090,7 +1092,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 100, src/scss/_components/homepage/_table.scss */
+/* line 102, src/scss/_components/homepage/_table.scss */
 .table__block-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1109,13 +1111,13 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 100, src/scss/_components/homepage/_table.scss */
+  /* line 102, src/scss/_components/homepage/_table.scss */
   .table__block-right {
     width: 175px;
   }
 }
 
-/* line 111, src/scss/_components/homepage/_table.scss */
+/* line 113, src/scss/_components/homepage/_table.scss */
 .table__block-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1126,7 +1128,7 @@ picture {
           flex-wrap: wrap;
 }
 
-/* line 115, src/scss/_components/homepage/_table.scss */
+/* line 117, src/scss/_components/homepage/_table.scss */
 .table__block-row > div {
   width: 100%;
   max-width: -webkit-calc(100% / 3);
@@ -1136,13 +1138,13 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 115, src/scss/_components/homepage/_table.scss */
+  /* line 117, src/scss/_components/homepage/_table.scss */
   .table__block-row > div {
     padding-right: 30px;
   }
 }
 
-/* line 126, src/scss/_components/homepage/_table.scss */
+/* line 128, src/scss/_components/homepage/_table.scss */
 .table__block-data {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1158,7 +1160,7 @@ picture {
           justify-content: space-between;
 }
 
-/* line 132, src/scss/_components/homepage/_table.scss */
+/* line 134, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(1) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1168,7 +1170,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 137, src/scss/_components/homepage/_table.scss */
+/* line 139, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(1) p {
   font-weight: bold;
   font-size: 12px;
@@ -1176,7 +1178,7 @@ picture {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 144, src/scss/_components/homepage/_table.scss */
+/* line 146, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(2) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1200,14 +1202,14 @@ picture {
   background-position: center;
 }
 
-/* line 156, src/scss/_components/homepage/_table.scss */
+/* line 158, src/scss/_components/homepage/_table.scss */
 .table__block-data > div:nth-of-type(2) span {
   color: #ffffff;
   font-weight: bold;
   font-size: 12px;
 }
 
-/* line 165, src/scss/_components/homepage/_table.scss */
+/* line 167, src/scss/_components/homepage/_table.scss */
 .table__block-circle {
   overflow: hidden;
   position: relative;
@@ -1230,13 +1232,13 @@ picture {
   background-color: #000;
 }
 
-/* line 176, src/scss/_components/homepage/_table.scss */
+/* line 178, src/scss/_components/homepage/_table.scss */
 .table__block-circle p,
 .table__block-circle .icon-font {
   color: #ffffff;
 }
 
-/* line 181, src/scss/_components/homepage/_table.scss */
+/* line 183, src/scss/_components/homepage/_table.scss */
 .table__block-circle p {
   font-weight: bold;
   font-size: 35px;
@@ -1244,7 +1246,7 @@ picture {
   color: #fff;
 }
 
-/* line 188, src/scss/_components/homepage/_table.scss */
+/* line 190, src/scss/_components/homepage/_table.scss */
 .table__block-circle .icon-font {
   margin-left: 3px;
   font-size: 25px;

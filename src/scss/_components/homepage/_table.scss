@@ -6,10 +6,12 @@
 	padding-bottom: 141px;
 
 	&__wrapper {
-		overflow: hidden;
-		overflow-x: auto;
-		position: relative;
-		width: calc(100% + 15px);
+		@include adaptive(1023) {
+			overflow: hidden;
+			overflow-x: auto;
+			position: relative;
+			width: calc(100% + 15px);
+		}
 	}
 
 	&__container {
