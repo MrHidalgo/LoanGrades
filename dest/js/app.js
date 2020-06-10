@@ -119,7 +119,21 @@ var initPreventBehavior = function initPreventBehavior() {
 		$('[sort-lowest-js]').on('click', function (ev) {
 			sortNumberTable1();
 		});
-		$('[sort-highest-js]').on('click', function (ev) {});
+		$('[sort-highest-js]').on('click', function (ev) {
+			sortNumberTable1();
+
+			$.fn.reverseChildren = function () {
+				return this.each(function () {
+					var $this = $(this);
+
+					$this.children().each(function () {
+						$this.prepend(this);
+					});
+				});
+			};
+
+			$('#table .table__tbody').reverseChildren();
+		});
 	};
 	/*
  * CALLBACK :: end
